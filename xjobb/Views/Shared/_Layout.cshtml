@@ -5,14 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - xjobb</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    @* <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" /> *@
     <link rel="stylesheet" href="~/xjobb.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="/templates/assets/css/main.css" asp-append-version="true"/>
+    <link rel="stylesheet" href="/templates/assets/css/fontawesome-all.min.css" asp-append-version="true" />
+
 </head>
 <body>
-    <header>
+    @* <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">xjobb</a>
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Hej</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -29,18 +32,101 @@
                 </div>
             </div>
         </nav>
+    </header> *@
+
+    <!-- Header -->
+    <header id="header">
+        <div class="logo container">
+            <div>
+                <h1><a href="index.html" id="logo">TXT</a></h1>
+                <p>Välkommen till Kvarnnibble Gård</p>
+            </div>
+        </div>
     </header>
+
+    <!-- Nav -->
+    <nav id="nav">
+        <ul>
+            <li class="current"><a href="index.html">Home</a></li>
+            <li>
+                <a href="#">Dropdown</a>
+                <ul>
+                    <li><a href="#">Lorem ipsum dolor</a></li>
+                    <li><a href="#">Magna phasellus</a></li>
+                    <li>
+                        <a href="#">Phasellus consequat</a>
+                        <ul>
+                            <li><a href="#">Lorem ipsum dolor</a></li>
+                            <li><a href="#">Phasellus consequat</a></li>
+                            <li><a href="#">Magna phasellus</a></li>
+                            <li><a href="#">Etiam dolore nisl</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Veroeros feugiat</a></li>
+                </ul>
+            </li>
+            <li><a href="left-sidebar.html">Left Sidebar</a></li>
+            <li><a href="right-sidebar.html">Right Sidebar</a></li>
+            <li><a href="no-sidebar.html">No Sidebar</a></li>
+        </ul>
+    </nav>
+
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
+@*     <footer class="border-top footer text-muted">
         <div class="container">
             &copy; 2024 - xjobb - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
+    </footer> *@
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="container">
+            <div class="row gtr-200">
+                <div class="col-12">
+
+                    <!-- About -->
+                    <section>
+                        <h2 class="major"><span>What's this about?</span></h2>
+                        <p>
+                            This is <strong>TXT</strong>, yet another free responsive site template designed by
+                            <a href="http://twitter.com/ajlkn">AJ</a> for <a href="http://html5up.net">HTML5 UP</a>. It's released under the
+                            <a href="http://html5up.net/license/">Creative Commons Attribution</a> license so feel free to use it for
+                            whatever you're working on (personal or commercial), just be sure to give us credit for the design.
+                            That's basically it :)
+                        </p>
+                    </section>
+
+                </div>
+                <div class="col-12">
+
+                    <!-- Contact -->
+                    <section>
+                        <h2 class="major"><span>Get in touch</span></h2>
+                        <ul class="contact">
+                            <li><a class="icon brands fa-facebook-f" href="#"><span class="label">Facebook</span></a></li>
+                            <li><a class="icon brands fa-instagram" href="#"><span class="label">Instagram</span></a></li>
+                        </ul>
+                    </section>
+
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div id="copyright">
+                <ul class="menu">
+                    <li>&copy; Untitled. All rights reserved</li>
+                    <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+                </ul>
+            </div>
+
+        </div>
     </footer>
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
